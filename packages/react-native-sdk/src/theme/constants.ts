@@ -47,5 +47,67 @@ const ref = {
   },
 };
 
+// aligned with packages/styling/src/_global-theme-variables.scss
+const paletteV2 = {
+  // Brand colors
+  brandColor1: '#005fff',
+  brandColor2: '#69e5f6',
+  brandColor3: '#00e2a1',
+  brandColor4: '#ffd646',
+  brandColor5: '#dc433b',
+  brandColor6: '#b38af8',
+  // Base colors
+  baseColor1: '#e3e4e5',
+  baseColor2: '#979ca0',
+  baseColor3: '#4c535b',
+  baseColor4: '#000000',
+  baseColor5: '#0c0d0e',
+  baseColor6: '#19232d',
+  baseColor7: '#101213',
+
+  // Backdrops
+  backdrop1: 'rgba(0, 0, 0, 0.5)',
+
+  // Button colors:
+  buttonDefaultBase: '#19232d',
+  buttonDefaultHover: '#4c535b',
+  buttonDefaultPressed: '#0c0d0e',
+  buttonDefaultActive: '#19232d',
+  buttonDefaultDisabled: '#1e262e',
+
+  buttonPrimaryBase: '#19232d',
+  buttonPrimaryHover: '#4c8fff',
+  buttonPrimaryPressed: '#0c48ab',
+  buttonPrimaryActive: '#005fff',
+
+  buttonSecondaryBase: '#19232d',
+  buttonSecondaryHover: '#e96962',
+  buttonSecondaryPressed: '#6a3233',
+  buttonSecondaryActive: '#dc433b',
+
+  buttonTertiaryBase: '#dc433b',
+  buttonTertiaryHover: '#e96962',
+  buttonTertiaryPressed: '#6a3233',
+  buttonTertiaryActive: '#31292f',
+
+  // Icon colors:
+  iconDefault: '#b0b4b7',
+  iconHover: '#e3e4e5',
+  iconPressed: '#656b72',
+  iconActive: '#005fff',
+  iconAlert: '#dc433b',
+  iconDisabled: '#323b44',
+
+  // Alerts colors:
+  alertSuccess: '#00e2a1',
+  alertCaution: '#ffd646',
+  alertWarning: '#dc433b',
+
+  // Alerts backgrounds:
+  alertSuccessBackground: 'rgba(0, 226, 161, 0.5)',
+  alertCautionBackground: 'rgba(255, 214, 70, 0.5)',
+  alertWarningBackground: 'rgba(220, 67, 59, 0.5)',
+};
+
 const { palette } = ref;
-export { palette };
+export { palette, paletteV2 };
