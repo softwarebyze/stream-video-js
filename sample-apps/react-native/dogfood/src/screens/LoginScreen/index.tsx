@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { REACT_NATIVE_DOGFOOD_APP_ENVIRONMENT } from '@env';
 import {
   Image,
@@ -14,19 +14,21 @@ import {
   GoogleSignin,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
-import { useAppGlobalStoreSetState } from '../contexts/AppContext';
-import { appTheme } from '../theme';
-import { Button } from '../components/Button';
-import { TextInput } from '../components/TextInput';
-import { useI18n } from '@stream-io/video-react-native-sdk';
-import { KnownUsers } from '../constants/KnownUsers';
-import { useOrientation } from '../hooks/useOrientation';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useAppGlobalStoreSetState } from '../../contexts/AppContext';
+import { Button } from '../../components/Button';
+import { colorPallete, useI18n } from '@stream-io/video-react-native-sdk';
+import { KnownUsers } from '../../constants/KnownUsers';
+import { useOrientation } from '../../hooks/useOrientation';
+import CustomLoginModal from './CustomLoginModal';
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
 GoogleSignin.configure({
   // webClientId: '<FROM DEVELOPER CONSOLE>', // client ID of type WEB for your server (needed to verify user ID and offline access)
   // offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
-  hostedDomain: 'getstream.io', // specifies a hosted domain restriction
+  // hostedDomain: 'getstream.io', // specifies a hosted domain restriction
   // forceCodeForRefreshToken: true, // [Android] related to `serverAuthCode`, read the docs link below *.
   // accountName: '', // [Android] specifies an account name on the device that should be used
   // iosClientId: '<FROM DEVELOPER CONSOLE>', // [iOS] if you want to specify the client ID of type iOS (otherwise, it is taken from GoogleService-Info.plist)
@@ -36,21 +38,28 @@ GoogleSignin.configure({
 });
 
 const generateValidUserId = (userId: string) => {
-  return userId.replace(/[^_\-0-9a-zA-Z@]/g, '_').replace('@getstream_io', '');
+  // Chat does not allow for Id's to include special characters
+  return userId.replace(/[^_\-0-9a-zA-Z@]/g, '_');
 };
 
 const LoginScreen = () => {
-  const [localUserId, setLocalUserId] = useState('');
+  const [customLoginModalVisible, setCustomLoginModalVisible] = useState(false);
   const [prontoEnvironment, setProntoEnvironment] = useState(
     REACT_NATIVE_DOGFOOD_APP_ENVIRONMENT === 'pronto',
   );
+
+  const safeAreaInsets = useSafeAreaInsets();
+
   const [loader, setLoader] = useState(false);
   const { t } = useI18n();
   const orientation = useOrientation();
 
   const setState = useAppGlobalStoreSetState();
 
-  const loginHandler = async () => {
+  // TODO: support light mode
+  const colors = colorPallete.dark;
+
+  const loginHandler = async (localUserId: string) => {
     try {
       const _userId = generateValidUserId(localUserId);
       let _userImageUrl = `https://getstream.io/random_png/?id=${_userId}&name=${_userId}`;
@@ -113,14 +122,30 @@ const LoginScreen = () => {
   };
 
   return (
-    <SafeAreaView style={[styles.container, landscapeStyles]}>
+    <SafeAreaView
+      style={[
+        styles.container,
+        { backgroundColor: colors.sheet_secondary },
+        landscapeStyles,
+      ]}
+      edges={['top']}
+    >
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={[styles.keyboardContainer, landscapeStyles]}
       >
+        <CustomLoginModal
+          modalVisible={customLoginModalVisible}
+          onClose={() => setCustomLoginModalVisible(false)}
+          loginHandler={loginHandler}
+        />
         {REACT_NATIVE_DOGFOOD_APP_ENVIRONMENT === 'pronto' && (
-          <View style={styles.header}>
-            <Text style={styles.envText}>{t('Pronto')}</Text>
+          <View style={styles.envHeader}>
+            <Text
+              style={[styles.envText, { color: colors.type_primary }]}
+            >{`Current Environment: ${
+              prontoEnvironment ? t('Pronto') : t('Demo')
+            }`}</Text>
             <Switch
               value={prontoEnvironment}
               onValueChange={(value) => {
@@ -131,61 +156,54 @@ const LoginScreen = () => {
                 }
                 setProntoEnvironment(value);
               }}
-              trackColor={{ true: appTheme.colors.light_blue }}
-              thumbColor={appTheme.colors.primary}
+              trackColor={{ true: colors.icon_primary_hover }}
+              thumbColor={colors.icon_primary_accent}
             />
           </View>
         )}
         <View style={styles.topContainer}>
-          <Image source={require('../assets/Logo.png')} style={styles.logo} />
           <View>
-            {REACT_NATIVE_DOGFOOD_APP_ENVIRONMENT === 'pronto' ? (
-              <Text style={styles.title}>
-                {prontoEnvironment
-                  ? t('Stream DogFood App')
-                  : t('Stream Video Calling')}
+            <Image
+              source={require('../../assets/prejoin-logo.png')}
+              style={styles.logo}
+            />
+            <View style={styles.titleContainer}>
+              <Text style={[styles.title, { color: colors.type_primary }]}>
+                {'Stream'}
               </Text>
-            ) : (
-              <Text style={styles.title}>{t('Stream Video Calling')}</Text>
-            )}
-            <Text style={styles.subTitle}>
-              {REACT_NATIVE_DOGFOOD_APP_ENVIRONMENT === 'pronto'
-                ? t(
-                    'Please sign in with your Google Stream account or a Custom user id.',
-                  )
-                : t('Please sign in with Custom User ID')}
-            </Text>
+              <Text
+                style={[
+                  styles.titleCenter,
+                  { color: colors.icon_alert_success },
+                ]}
+              >
+                {'[Video Calling]'}
+              </Text>
+              <Text style={[styles.title, { color: colors.type_primary }]}>
+                {'Demo'}
+              </Text>
+            </View>
           </View>
         </View>
-        <View style={styles.bottomContainer}>
-          <View style={styles.customUser}>
-            <TextInput
-              placeholder={t('Enter User ID')}
-              value={localUserId}
-              onChangeText={(text) => {
-                setLocalUserId(text);
-              }}
-              autoCapitalize="none"
-              autoCorrect={false}
-            />
-            <Button
-              title={t('Login')}
-              disabled={!localUserId}
-              onPress={loginHandler}
-              buttonStyle={styles.loginButton}
-            />
-          </View>
-          {REACT_NATIVE_DOGFOOD_APP_ENVIRONMENT === 'pronto' && (
-            <>
-              <Text style={styles.orText}>{t('OR')}</Text>
-              <Button
-                title={t('Google Sign In')}
-                onPress={signInViaGoogle}
-                disabled={loader}
-                buttonStyle={styles.googleSignin}
-              />
-            </>
-          )}
+        <View
+          style={[
+            styles.buttonsContainer,
+            { paddingBottom: safeAreaInsets.bottom },
+            { backgroundColor: colors.sheet_primary },
+          ]}
+        >
+          <Button
+            title={'Sign in with Email'}
+            onPress={() => setCustomLoginModalVisible(true)}
+            disabled={loader}
+            buttonStyle={styles.signInButton}
+          />
+          <Button
+            title={t('Google Sign In')}
+            onPress={signInViaGoogle}
+            disabled={loader}
+            buttonStyle={styles.signInButton}
+          />
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
@@ -194,9 +212,7 @@ const LoginScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: appTheme.spacing.lg,
     flex: 1,
-    backgroundColor: appTheme.colors.static_grey,
   },
   keyboardContainer: {
     flex: 1,
@@ -204,60 +220,52 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flex: 1,
+    alignItems: 'center',
+    // marginHorizontal: 16,
     justifyContent: 'center',
   },
-  header: {
+  envHeader: {
+    width: '100%',
     flexDirection: 'row',
-    alignSelf: 'flex-end',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
   },
   envText: {
-    color: appTheme.colors.static_white,
     fontSize: 16,
     marginRight: 8,
     alignSelf: 'center',
   },
   logo: {
-    height: 100,
-    width: 100,
-    borderRadius: 20,
+    maxWidth: '100%',
+    resizeMode: 'contain',
+  },
+  titleContainer: {
+    position: 'absolute',
+    justifyContent: 'flex-end',
     alignSelf: 'center',
+    height: '100%',
   },
   title: {
-    fontSize: 30,
-    color: appTheme.colors.static_white,
+    fontSize: 24,
     fontWeight: '500',
     textAlign: 'center',
-    marginTop: appTheme.spacing.lg,
   },
-  subTitle: {
-    color: appTheme.colors.light_gray,
-    fontSize: 16,
+  titleCenter: {
+    fontSize: 24,
+    fontWeight: '500',
     textAlign: 'center',
-    marginHorizontal: appTheme.spacing.xl,
   },
-  bottomContainer: {
-    flex: 1,
+  buttonsContainer: {
+    paddingTop: 16,
+    borderTopEndRadius: 24,
+    borderTopStartRadius: 24,
+    paddingHorizontal: 16,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  customUser: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  loginButton: {
-    marginLeft: appTheme.spacing.lg,
-  },
-  orText: {
-    fontSize: 17,
-    color: appTheme.colors.static_white,
-    fontWeight: '500',
-    marginVertical: appTheme.spacing.lg,
-  },
-  googleSignin: {
+  signInButton: {
     width: '100%',
+    marginBottom: 16,
   },
 });
 

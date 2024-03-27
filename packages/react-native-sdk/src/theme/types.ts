@@ -1,4 +1,5 @@
 import { ColorValue, TextStyle } from 'react-native';
+import { ColorVariablesType } from './constants';
 
 // TODO: check if this is used somewhere and remove if not
 export type ColorScheme = {
@@ -23,7 +24,15 @@ export type ColorScheme = {
   [key: string]: ColorValue;
 };
 
+export type ColorSchemeV2 = ColorVariablesType & {
+  // allow any other color
+  [key: string]: ColorValue;
+};
+
 export type ColorType = Record<'light' | 'dark', ColorScheme>;
+
+// light mode support is still TODO
+export type ColorTypeV2 = Record<'dark', ColorSchemeV2>;
 
 export type FontTypes =
   | 'heading4'
@@ -41,3 +50,5 @@ export type FontStyle = {
 export type FontsScheme = Record<FontTypes, FontStyle>;
 
 export type Theme = ColorType;
+
+export type ThemeV2 = ColorTypeV2;

@@ -8,8 +8,6 @@
   "Stream DogFood App": "Stream DogFood App",
   "Stream Video Calling": "Stream Video Calling",
   "Choose the Mode": "Choose the Mode",
-  "Please sign in with your Google Stream account or a Custom user id.": "Please sign in with your Google Stream account or a Custom user id.",
-  "Please sign in with Custom User ID": "Please sign in with Custom User ID",
   "OR": "OR",
   "Select Participants": "Select Participants",
   "Messages are currently visible to anyone with the link and valid session.": "Messages are currently visible to anyone with the link and valid session.",
@@ -64,5 +62,8 @@
   "{{ numberOfParticipants }} participant(s) are in the call.": "{{ numberOfParticipants }} participant(s) are in the call.",
   "You are about to join a call with id {{ callId }}.": "You are about to join a call with id {{ callId }}.",
   "{{ user }} requested to {{ permissions }}": "{{ user }} requested to {{ permissions }}",
-  "Pronto": "Pronto"
+  "Pronto": "Pronto",
+  "Demo": "Demo",
+  "Enter an e-mail address": "Enter an e-mail address",
+  "Email address": "Email address"
 }

@@ -47,67 +47,201 @@ const ref = {
   },
 };
 
-// aligned with packages/styling/src/_global-theme-variables.scss
-const paletteV2 = {
-  // Brand colors
-  brandColor1: '#005fff',
-  brandColor2: '#69e5f6',
-  brandColor3: '#00e2a1',
-  brandColor4: '#ffd646',
-  brandColor5: '#dc433b',
-  brandColor6: '#b38af8',
-  // Base colors
-  baseColor1: '#e3e4e5',
-  baseColor2: '#979ca0',
-  baseColor3: '#4c535b',
-  baseColor4: '#000000',
-  baseColor5: '#0c0d0e',
-  baseColor6: '#19232d',
-  baseColor7: '#101213',
-
-  // Backdrops
-  backdrop1: 'rgba(0, 0, 0, 0.5)',
-
-  // Button colors:
-  buttonDefaultBase: '#19232d',
-  buttonDefaultHover: '#4c535b',
-  buttonDefaultPressed: '#0c0d0e',
-  buttonDefaultActive: '#19232d',
-  buttonDefaultDisabled: '#1e262e',
-
-  buttonPrimaryBase: '#19232d',
-  buttonPrimaryHover: '#4c8fff',
-  buttonPrimaryPressed: '#0c48ab',
-  buttonPrimaryActive: '#005fff',
-
-  buttonSecondaryBase: '#19232d',
-  buttonSecondaryHover: '#e96962',
-  buttonSecondaryPressed: '#6a3233',
-  buttonSecondaryActive: '#dc433b',
-
-  buttonTertiaryBase: '#dc433b',
-  buttonTertiaryHover: '#e96962',
-  buttonTertiaryPressed: '#6a3233',
-  buttonTertiaryActive: '#31292f',
-
-  // Icon colors:
-  iconDefault: '#b0b4b7',
-  iconHover: '#e3e4e5',
-  iconPressed: '#656b72',
-  iconActive: '#005fff',
-  iconAlert: '#dc433b',
-  iconDisabled: '#323b44',
-
-  // Alerts colors:
-  alertSuccess: '#00e2a1',
-  alertCaution: '#ffd646',
-  alertWarning: '#dc433b',
-
-  // Alerts backgrounds:
-  alertSuccessBackground: 'rgba(0, 226, 161, 0.5)',
-  alertCautionBackground: 'rgba(255, 214, 70, 0.5)',
-  alertWarningBackground: 'rgba(220, 67, 59, 0.5)',
+const darkColorPrimitives = {
+  primary: {
+    '70': {
+      value: '#4c8fff',
+    },
+    '100': {
+      value: '#005fff',
+    },
+    '150': {
+      value: '#123d82',
+    },
+    '180': {
+      value: '#1b2c43',
+    },
+  },
+  secondary: {
+    '60': {
+      value: '#a5effa',
+    },
+    '100': {
+      value: '#69e5f6',
+    },
+    '140': {
+      value: '#448592',
+    },
+    '180': {
+      value: '#263942',
+    },
+  },
+  tertiary: {
+    '60': {
+      value: '#d1b9fb',
+    },
+    '100': {
+      value: '#b38af8',
+    },
+    '170': {
+      value: '#4b446b',
+    },
+    '190': {
+      value: '#2d3042',
+    },
+  },
+  success: {
+    '60': {
+      value: '#66eec7',
+    },
+    '100': {
+      value: '#00e2a1',
+    },
+    '150': {
+      value: '#12715c',
+    },
+    '190': {
+      value: '#1d2f34',
+    },
+  },
+  caution: {
+    '60': {
+      value: '#ffe690',
+    },
+    '100': {
+      value: '#ffd646',
+    },
+    '150': {
+      value: '#786c38',
+    },
+    '180': {
+      value: '#353830',
+    },
+  },
+  warning: {
+    '70': {
+      value: '#e77b76',
+    },
+    '100': {
+      value: '#dc433b',
+    },
+    '150': {
+      value: '#7d3535',
+    },
+    '190': {
+      value: '#31292f',
+    },
+  },
+  neutral: {
+    '0': {
+      value: '#eff0f1',
+    },
+    '10': {
+      value: '#e3e4e5',
+    },
+    '20': {
+      value: '#caccce',
+    },
+    '30': {
+      value: '#b0b4b7',
+    },
+    '40': {
+      value: '#979ca0',
+    },
+    '50': {
+      value: '#7e8389',
+    },
+    '60': {
+      value: '#656b72',
+    },
+    '70': {
+      value: '#4c535b',
+    },
+    '80': {
+      value: '#323b44',
+    },
+    '90': {
+      value: '#19232d',
+    },
+    '100': {
+      value: '#0d1721',
+    },
+    '110': {
+      value: '#101213',
+    },
+    '120': {
+      value: '#000000',
+    },
+  },
 };
 
+type ColorPrimitive = typeof darkColorPrimitives;
+
+const getColorVariables = (
+  colorPrimitives: ColorPrimitive,
+  manualColors: {
+    sheetOverlay: string;
+    buttonSecondaryDisabled: string;
+    buttonTertiaryDisabled: string;
+  },
+) => {
+  return {
+    sheet_primary: colorPrimitives.neutral['120'].value,
+    sheet_secondary: colorPrimitives.neutral['110'].value,
+    sheet_tertiary: colorPrimitives.neutral['90'].value,
+    sheet_overlay: manualColors.sheetOverlay,
+    container_primary: colorPrimitives.primary['180'].value,
+    container_secondary: colorPrimitives.secondary['180'].value,
+    container_tertiary: colorPrimitives.tertiary['190'].value,
+    container_success: colorPrimitives.success['190'].value,
+    container_caution: colorPrimitives.caution['180'].value,
+    container_warning: colorPrimitives.warning['190'].value,
+    container_neutral: colorPrimitives.neutral['80'].value,
+    type_primary: colorPrimitives.neutral['0'].value,
+    type_secondary: colorPrimitives.neutral['30'].value,
+    type_tertiary: colorPrimitives.neutral['60'].value,
+    type_quaternary: colorPrimitives.neutral['110'].value,
+    icon_primary_accent: colorPrimitives.primary['100'].value,
+    icon_primary_default: colorPrimitives.neutral['0'].value,
+    icon_primary_hover: colorPrimitives.neutral['30'].value,
+    icon_primary_pressed: colorPrimitives.neutral['60'].value,
+    icon_primary_disabled: colorPrimitives.neutral['50'].value,
+    icon_alert_warning: colorPrimitives.warning['100'].value,
+    icon_alert_caution: colorPrimitives.caution['100'].value,
+    icon_alert_success: colorPrimitives.success['100'].value,
+    button_primary_default: colorPrimitives.primary['100'].value,
+    button_primary_hover: colorPrimitives.primary['70'].value,
+    button_primary_pressed: colorPrimitives.primary['150'].value,
+    button_primary_disabled: colorPrimitives.primary['180'].value,
+    button_secondary_default: colorPrimitives.neutral['90'].value,
+    button_secondary_hover: colorPrimitives.neutral['80'].value,
+    button_secondary_pressed: colorPrimitives.neutral['110'].value,
+    button_secondary_active_default: colorPrimitives.primary['100'].value,
+    button_secondary_active_hover: colorPrimitives.primary['70'].value,
+    button_secondary_active_pressed: colorPrimitives.primary['150'].value,
+    button_secondary_disabled: manualColors.buttonSecondaryDisabled,
+    button_secondary_warning_default: colorPrimitives.warning['100'].value,
+    button_secondary_warning_hover: colorPrimitives.warning['70'].value,
+    button_secondary_warning_pressed: colorPrimitives.warning['150'].value,
+    button_tertiary_stroke: colorPrimitives.neutral['80'].value,
+    button_tertiary_hover: colorPrimitives.neutral['70'].value,
+    button_tertiary_pressed: colorPrimitives.neutral['110'].value,
+    button_tertiary_active: colorPrimitives.neutral['90'].value,
+    button_tertiary_disabled: manualColors.buttonTertiaryDisabled,
+    button_quaternary_default: colorPrimitives.warning['100'].value,
+    button_quaternary_hover: colorPrimitives.warning['70'].value,
+    button_quaternary_pressed: colorPrimitives.warning['150'].value,
+    button_quaternary_disabled: colorPrimitives.warning['190'].value,
+  };
+};
+
+const colorVariablesDark = getColorVariables(darkColorPrimitives, {
+  sheetOverlay: 'rgba(12, 13, 14, 0.6500)',
+  buttonSecondaryDisabled: 'rgba(30, 38, 46, 0.1600)',
+  buttonTertiaryDisabled: 'rgba(30, 38, 46, 0.1600)',
+});
+
+export type ColorVariablesType = ReturnType<typeof getColorVariables>;
+
 const { palette } = ref;
-export { palette, paletteV2 };
+export { palette, colorVariablesDark };

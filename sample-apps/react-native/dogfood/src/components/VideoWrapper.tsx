@@ -6,6 +6,7 @@ import {
 import { useAppGlobalStoreValue } from '../contexts/AppContext';
 import { createToken } from '../modules/helpers/createToken';
 import translations from '../translations';
+import { AuthenticationProgress } from './AuthenticatingProgress';
 
 export const VideoWrapper = ({ children }: PropsWithChildren<{}>) => {
   const userId = useAppGlobalStoreValue((store) => store.userId);
@@ -52,7 +53,7 @@ export const VideoWrapper = ({ children }: PropsWithChildren<{}>) => {
   }, [appEnvironment, user]);
 
   if (!videoClient) {
-    return null;
+    return <AuthenticationProgress />;
   }
 
   return (
