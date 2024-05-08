@@ -4273,6 +4273,38 @@ export interface StartRecordingResponse {
 /**
  *
  * @export
+ * @interface DeleteRecordingRequest
+ */
+export interface DeleteRecordingRequest {
+  /**
+   *
+   * @type {string}
+   * @memberof DeleteRecordingRequest
+   */
+  session: string;
+  /**
+   *
+   * @type {string}
+   * @memberof DeleteRecordingRequest
+   */
+  filename: string;
+}
+/**
+ *
+ * @export
+ * @interface DeleteRecordingResponse
+ */
+export interface DeleteRecordingResponse {
+  /**
+   *
+   * @type {string}
+   * @memberof DeleteRecordingResponse
+   */
+  duration: string;
+}
+/**
+ *
+ * @export
  * @interface StartTranscriptionRequest
  */
 export interface StartTranscriptionRequest {

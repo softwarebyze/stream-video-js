@@ -24,6 +24,8 @@ import {
   BlockUserResponse,
   CollectUserFeedbackRequest,
   CollectUserFeedbackResponse,
+  DeleteRecordingResponse,
+  DeleteRecordingRequest,
   EndCallResponse,
   GetCallResponse,
   GetCallStatsResponse,
@@ -1615,6 +1617,16 @@ export class Call {
       `${this.streamClientBasePath}/stop_recording`,
       {},
     );
+  };
+
+  /**
+   * Deletes a recording
+   */
+  deleteRecording = async (request: DeleteRecordingRequest) => {
+    return this.streamClient.post<
+      DeleteRecordingResponse,
+      DeleteRecordingRequest
+    >(`${this.streamClientBasePath}/delete_recording`, request);
   };
 
   /**
