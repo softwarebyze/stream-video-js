@@ -7,22 +7,20 @@
     "project": "tsconfig.json",
     "sourceType": "module"
   },
-  "extends": [
-    "react-app",
-    "plugin:import/typescript"
-  ],
+  "extends": ["react-app", "plugin:import/typescript"],
   "settings": {
     "import/resolver": {
       "typescript": true
     }
   },
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["unused-imports", "prettier"],
   "ignorePatterns": ["node_modules"],
   "rules": {
     "prettier/prettier": "error",
     "@typescript-eslint/no-shadow": "error",
-    "import/no-extraneous-dependencies": "error"
+    "import/no-extraneous-dependencies": "error",
+    // this rule doesn't come with an autofixer so we use a different one
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error"
   }
 }

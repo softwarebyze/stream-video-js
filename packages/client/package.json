@@ -15,8 +15,7 @@
     "test": "vitest",
     "clean:docs": "rimraf generated-docs",
     "test-ci": "vitest --coverage",
-    "generate:open-api": "./generate-openapi.sh protocol",
-    "generate:open-api:dev": "./generate-openapi.sh chat"
+    "generate:open-api": "./generate-openapi.sh"
   },
   "files": [
     "dist",

@@ -145,3 +145,5 @@ export type TokenOrProvider = null | string | TokenProvider | undefined;
 
 export type BuiltInRejectReason = 'busy' | 'decline' | 'cancel';
 export type RejectReason = BuiltInRejectReason | string;
+
+export type StreamResponse<T> = T & { metadata: undefined };
