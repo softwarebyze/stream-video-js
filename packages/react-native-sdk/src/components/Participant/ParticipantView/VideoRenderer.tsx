@@ -43,6 +43,7 @@ export type VideoRendererProps = Pick<
  */
 export const VideoRenderer = ({
   trackType = 'videoTrack',
+  enabled,
   participant,
   isVisible = true,
   ParticipantVideoFallback = DefaultParticipantVideoFallback,
@@ -77,7 +78,7 @@ export const VideoRenderer = ({
     : videoStream) as unknown as MediaStream | undefined;
 
   const canShowVideo =
-    !!videoStreamToRender && isVisible && isPublishingVideoTrack;
+    enabled && !!videoStreamToRender && isVisible && isPublishingVideoTrack;
 
   const mirror =
     isLocalParticipant && !isScreenSharing && direction === 'front';

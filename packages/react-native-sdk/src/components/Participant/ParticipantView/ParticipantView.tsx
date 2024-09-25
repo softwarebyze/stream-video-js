@@ -26,6 +26,7 @@ import {
 } from './VideoRenderer';
 import { useTheme } from '../../../contexts/ThemeContext';
 import { CallContentProps } from '../../Call';
+import { useCallStateHooks } from '@stream-io/video-react-bindings';
 
 export type ParticipantViewComponentProps = {
   /**
@@ -88,6 +89,12 @@ export type ParticipantViewProps = ParticipantViewComponentProps &
      * In the fashion of https://www.w3.org/TR/html5/embedded-content-0.html#dom-video-videowidth and https://www.w3.org/TR/html5/rendering.html#video-object-fit, resembles the CSS style object-fit.
      */
     objectFit?: 'contain' | 'cover';
+
+    /**
+     * Pass false to disable rendering video and render fallback
+     * even if the participant has published video.
+     */
+    enabled?: boolean;
   };
 
 /**
@@ -98,6 +105,7 @@ export type ParticipantViewProps = ParticipantViewComponentProps &
 export const ParticipantView = ({
   participant,
   trackType = 'videoTrack',
+  enabled,
   isVisible = true,
   style,
   ParticipantLabel = DefaultParticipantLabel,
@@ -123,6 +131,9 @@ export const ParticipantView = ({
     participantView.highligtedContainer,
   ];
 
+  const { useIncomingVideoSettings } = useCallStateHooks();
+  const { isParticipantVideoEnabled } = useIncomingVideoSettings();
+
   return (
     <View
       style={[styles.container, style, speakerStyle]}
@@ -146,6 +157,11 @@ export const ParticipantView = ({
           ParticipantVideoFallback={ParticipantVideoFallback}
           objectFit={objectFit}
           videoZOrder={videoZOrder}
+          enabled={
+            participant.isLocalParticipant ||
+            trackType !== 'videoTrack' ||
+            isParticipantVideoEnabled(participant.sessionId)
+          }
         />
       )}
       <View style={[styles.footerContainer, participantView.footerContainer]}>

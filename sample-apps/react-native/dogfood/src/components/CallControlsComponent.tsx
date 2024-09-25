@@ -60,6 +60,8 @@ export const CallControlsComponent = ({
         <ToggleVideoPublishingButton />
         <ToggleAudioPublishingButton />
         <ToggleCameraFaceButton />
+        {/* TODO: add new button that will disable/enable incoming video */}
+        {/* <ToggleIncomingVideoButton /> */}
         <HangUpCallButton onPressHandler={onHangupCallHandler} />
       </View>
     </View>
