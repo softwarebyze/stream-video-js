@@ -22,7 +22,12 @@ import { lazy } from '../helpers/lazy';
 const getDevices = (permission: BrowserPermission, kind: MediaDeviceKind) => {
   return from(
     (async () => {
+      return [];
       let devices = await navigator.mediaDevices.enumerateDevices();
+      console.log('---- START getDevices in devices.ts ----', {
+        kind,
+        devices,
+      });
       // for privacy reasons, most browsers don't give you device labels
       // unless you have a corresponding camera or microphone permission
       const shouldPromptForBrowserPermission = devices.some(
@@ -114,7 +119,7 @@ export const getAudioDevices = lazy(() => {
     getAudioBrowserPermission().asObservable(),
   ).pipe(
     startWith(undefined),
-    concatMap(() => getDevices(getAudioBrowserPermission(), 'audioinput')),
+    concatMap(() => []),
     shareReplay(1),
   );
 });
@@ -154,6 +159,7 @@ export const getAudioOutputDevices = () => {
 };
 
 const getStream = async (constraints: MediaStreamConstraints) => {
+  console.log('---- START getUserMedia getStream in devices.ts ----');
   return await navigator.mediaDevices.getUserMedia(constraints);
 };
 
@@ -180,6 +186,7 @@ export const getAudioStream = async (
       throwOnNotAllowed: true,
       forcePrompt: true,
     });
+    console.log('---- START getAudioStream ----');
     return getStream(constraints);
   } catch (e) {
     getLogger(['devices'])('error', 'Failed to get audio stream', {
@@ -212,6 +219,7 @@ export const getVideoStream = async (
       throwOnNotAllowed: true,
       forcePrompt: true,
     });
+    console.log('---- START getVideoStream ----');
     return getStream(constraints);
   } catch (e) {
     getLogger(['devices'])('error', 'Failed to get video stream', {
@@ -236,6 +244,7 @@ export const getScreenShareStream = async (
   options?: DisplayMediaStreamOptions,
 ) => {
   try {
+    console.log('---- START getScreenShareStream in devices.ts ----');
     return await navigator.mediaDevices.getDisplayMedia({
       video: true,
       audio: {
@@ -261,7 +270,10 @@ export const deviceIds$ =
   typeof navigator.mediaDevices !== 'undefined'
     ? getDeviceChangeObserver().pipe(
         startWith(undefined),
-        concatMap(() => navigator.mediaDevices.enumerateDevices()),
+        concatMap(() => {
+          console.log('---- START deviceIds$ in devices.ts ----');
+          return navigator.mediaDevices.enumerateDevices();
+        }),
         shareReplay(1),
       )
     : undefined;

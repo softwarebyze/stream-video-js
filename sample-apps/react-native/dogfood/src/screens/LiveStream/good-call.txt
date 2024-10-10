@@ -1,0 +1,430 @@
+
+(connection.cc:893): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: UpdateState(), ms since last received response=2275, ms since last received data=113720, rtt=100, pings_since_last_response=
+(connection.cc:893): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: UpdateState(), ms since last received response=2530, ms since last received data=113975, rtt=100, pings_since_last_response=
+(connection.cc:985): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: Sending STUN ping, id=774679636855566652486977, nomination=0
+(connection.cc:1501): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: Sent STUN BINDING request, id=774679636855566652486977, use_candidate=1, nomination=0
+(connection.cc:1385): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWI|S|0|0|7241540810661953534|17]: Received STUN BINDING response, id=774679636855566652486977, code=0, rtt=19, pings_since_last_response=774679636855566652486977 
+(connection.cc:342): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: set_state
+(connection.cc:515): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: Received STUN BINDING request, id=f2fd146420f7f7ea936306b6
+(connection.cc:766): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: Sent STUN BINDING response, to=3.126.139.x:49531, id=f2fd146420f7f7ea936306b6
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(network.cc:157): Ignore link local IP:fe80:0:0:x:x:x:x:x
+(connection.cc:893): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: UpdateState(), ms since last received response=232, ms since last received data=114226, rtt=100, pings_since_last_response=
+Invalidating <RCTCxxBridge: 0x13152d740> (parent: <RCTBridge: 0x301e805b0>, executor: (null))
+[RNCallKeep][init]
+(openssl_adapter.cc:836): read_alert warning close notify SSL negotiation finished successfully
+(openssl_adapter.cc:836): write_alert warning close notify SSL negotiation finished successfully
+(dtls_transport.cc:710): DtlsTransport[0|1|_W]: DTLS transport closed by remote
+(dtls_transport.cc:824): DtlsTransport[0|1|_W]: set_writable to: 0
+(jsep_transport_controller.cc:1171):  Transport 0 writability changed to 0.
+(dtls_transport.cc:840): DtlsTransport[0|1|__]: set_dtls_state from:2 to 3
+(channel.cc:573): Channel not writable ({mid: 0, media_type: audio})
+(srtp_transport.cc:363): The params in SRTP transport are reset.
+(peer_connection.cc:1959): Changing IceConnectionState 3 => 5
+(peer_connection.cc:1978): Changing standardized IceConnectionState 3 => 2
+(sdp_offer_answer.cc:2847): Session: 6894934009783946541 Old state: stable New state: closed
+(sdp_offer_answer.cc:2847): Session: 2043862898875851774 Old state: stable New state: closed
+(webrtc_voice_engine.cc:2358): WRVMC::SetOutputVolume({ssrc=1510183892}, {volume=0.00})
+(webrtc_voice_engine.cc:2368): WRVMC::SetOutputVolume => (stream with SSRC 1510183892 now uses volume 0.00)
+(channel.cc:532): Channel disabled: {mid: 0, media_type: audio}
+(neteq_impl.cc:443): FlushBuffers
+(audio_device_ios.mm:243): AudioDeviceIOS::StopPlayout
+(audio_device_ios.mm:902): AudioDeviceIOS::ShutdownPlayOrRecord
+(RTCLogging.mm:33): (voice_processing_audio_unit.mm:351 Stop): Stopping audio unit.
+(RTCLogging.mm:33): (voice_processing_audio_unit.mm:358 Stop): Stopped audio unit
+(RTCLogging.mm:33): (voice_processing_audio_unit.mm:367 Uninitialize): Unintializing audio unit.
+(RTCLogging.mm:33): (voice_processing_audio_unit.mm:374 Uninitialize): Uninitialized audio unit.
+(RTCLogging.mm:33): (voice_processing_audio_unit.mm:477 DisposeAudioUnit): Disposing audio unit.
+(connection.cc:893): Conn[3304f000:0:Net[en0:192.168.50.x/24:Wifi:id=1]:XU1DQypn:1:0:stun:udp:143.178.254.x:49519->77PEI71O:1:2130706431:local:udp:3.126.139.x:49531|CRWS|S|0|0|7241540810661953534|17]: UpdateState(), ms since last received response=488, ms since last received data=134, rtt=100, pings_since_last_response=
+(RTCLogging.mm:33): (RTCAudioSession.mm:226 -[RTCAudioSession removeDelegate:]): Removing delegate: (0x30379dca0)
+(RTCLogging.mm:33): (audio_device_ios.mm:843 UnconfigureAudioSession): Unconfiguring audio session.
+(RTCLogging.mm:33): (RTCAudioSession.mm:784 -[RTCAudioSession unconfigureWebRTCSession:]): Unconfiguring audio session for WebRTC.
+(RTCLogging.mm:33): (RTCAudioSession.mm:541 -[RTCAudioSession handleRouteChangeNotification:]): Audio route changed:
+(RTCLogging.mm:33): (RTCAudioSession.mm:566 -[RTCAudioSession handleRouteChangeNotification:]): Audio route changed: RouteConfigurationChange
+(RTCLogging.mm:33): (RTCAudioSession.mm:573 -[RTCAudioSession handleRouteChangeNotification:]): Previous route: <AVAudioSessionRouteDescription: 0x303761080, 
+inputs = (
+    "<AVAudioSessionPortDescription: 0x303760660, type = MicrophoneBuiltIn; name = iPhone Microphone; UID = Built-In Microphone; selectedDataSource = (null)>"
+); 
+outputs = (
+    "<AVAudioSessionPortDescription: 0x303761db0, type = Receiver; name = Receiver; UID = Built-In Receiver; selectedDataSource = (null)>"
+)>
+Current route:<AVAudioSessionRouteDescription: 0x3037a9f60, 
+inputs = (
+); 
+outputs = (
+    "<AVAudioSessionPortDescription: 0x3037a88b0, type = Speaker; name = Speaker; UID = Speaker; selectedDataSource = (null)>"
+)>
+(RTCLogging.mm:33): (RTCAudioSession.mm:665 -[RTCAudioSession decrementActivationCount]): Decrementing activation count.
+(RTCLogging.mm:33): (RTCAudioSession.mm:406 -[RTCAudioSession setActive:error:]): Number of current activations: 0
+(RTCLogging.mm:33): (audio_device_ios.mm:854 UnconfigureAudioSession): Unconfigured audio session.
+(RTCLogging.mm:33): (audio_device_ios.mm:265 StopPlayout): Average number of playout callbacks between glitches: 100000
+(audio_device_buffer.cc:150): total playout time: 114739
+(channel.cc:871): Changing voice state, recv=0 send=0 for {mid: 0, media_type: audio}
+(webrtc_voice_engine.cc:2295): RemoveRecvStream: 1510183892
+(call.cc:1220): UpdateAggregateNetworkState: aggregate_state change to down
+(rtp_transport_controller_send.cc:332): SignalNetworkState Down
+(pacing_controller.cc:110): PacedSender paused.
+(control_handler.cc:80): Bitrate estimate state changed, BWE: 300 kbps.
+(audio_receive_stream.cc:136): ~AudioReceiveStreamImpl: 1510183892
+(neteq_impl.cc:443): FlushBuffers
+(peer_connection.cc:571): Session: 6894934009783946541 is destroyed.
+(peer_connection.cc:571): Session: 2043862898875851774 is destroyed.
+(webrtc_voice_engine.cc:370): WebRtcVoiceEngine::~WebRtcVoiceEngine
+(audio_device_ios.mm:243): AudioDeviceIOS::StopPlayout
+(audio_device_ios.mm:297): AudioDeviceIOS::StopRecording
+(audio_device_ios.mm:159): AudioDeviceIOS::Terminate
+(audio_device_ios.mm:243): AudioDeviceIOS::StopPlayout
+(audio_device_ios.mm:297): AudioDeviceIOS::StopRecording
+(audio_device_buffer.cc:80): AudioDeviceBuffer::~dtor
+(audio_device_ios.mm:117): AudioDeviceIOS::~dtor<NSThread: 0x30202f100>{number = 128, name = (null)}
+(audio_device_ios.mm:159): AudioDeviceIOS::Terminate
+(RTCLogging.mm:33): (RTCAudioSession.mm:541 -[RTCAudioSession handleRouteChangeNotification:]): Audio route changed:
+(RTCLogging.mm:33): (RTCAudioSession.mm:554 -[RTCAudioSession handleRouteChangeNotification:]): Audio route changed: CategoryChange to :AVAudioSessionCategoryPlayAndRecord
+(RTCLogging.mm:33): (RTCAudioSession.mm:573 -[RTCAudioSession handleRouteChangeNotification:]): Previous route: <AVAudioSessionRouteDescription: 0x30376add0, 
+inputs = (
+    "<AVAudioSessionPortDescription: 0x30376a500, type = MicrophoneBuiltIn; name = iPhone Microphone; UID = Built-In Microphone; selectedDataSource = Bottom>"
+); 
+outputs = (
+    "<AVAudioSessionPortDescription: 0x30376bd00, type = Receiver; name = Receiver; UID = Built-In Receiver; selectedDataSource = (null)>"
+)>
+Current route:<AVAudioSessionRouteDescription: 0x303763ed0, 
+inputs = (
+); 
+outputs = (
+    "<AVAudioSessionPortDescription: 0x303760f40, type = Speaker; name = Speaker; UID = Speaker; selectedDataSource = (null)>"
+)>
+(field_trial.cc:164): Setting field trial string:WebRTC-Network-UseNWPathMonitor/Enabled/
+Using video encoder factory: RTCDefaultVideoEncoderFactory
+Using video decoder factory: RTCDefaultVideoDecoderFactory
+(audio_device_module_ios.mm:45): current platform is IOS
+(audio_device_module_ios.mm:46): iPhone Audio APIs will be utilized.
+(input_volume_stats_reporter.cc:98): Will not log any `WebRTC.Audio.Apm.AppliedInputVolume.*` histogram stats.
+(input_volume_stats_reporter.cc:98): Will not log any `WebRTC.Audio.Apm.RecommendedInputVolume.*` histogram stats.
+(audio_processing_impl.cc:695): Injected APM submodules:
+Echo control factory: 0
+Echo detector: 0
+Capture analyzer: 0
+Capture post processor: 0
+Render pre processor: 0
+(audio_processing_impl.cc:708): AudioProcessing: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 0 }, echo_canceller: { enabled: 0, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, headroom_db: 6, max_gain_db: 30, initial_gain_db: 8, max_gain_change_db_per_second: 3, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+(webrtc_voice_engine.cc:362): WebRtcVoiceEngine::WebRtcVoiceEngine
+(webrtc_voice_engine.cc:384): WebRtcVoiceEngine::Init
+(webrtc_voice_engine.cc:393): Supported send codecs in order of preference:
+(webrtc_voice_engine.cc:396): opus/48000/2 { minptime=10 useinbandfec=1 } (111)
+(webrtc_voice_engine.cc:396): red/48000/2 { =111/111 } (63)
+(webrtc_voice_engine.cc:396): G722/8000/1 (9)
+(webrtc_voice_engine.cc:396): ILBC/8000/1 (102)
+(webrtc_voice_engine.cc:396): PCMU/8000/1 (0)
+(webrtc_voice_engine.cc:396): PCMA/8000/1 (8)
+(webrtc_voice_engine.cc:396): CN/8000/1 (13)
+(webrtc_voice_engine.cc:396): telephone-event/48000/1 (110)
+(webrtc_voice_engine.cc:396): telephone-event/8000/1 (126)
+(webrtc_voice_engine.cc:399): Supported recv codecs in order of preference:
+(webrtc_voice_engine.cc:402): opus/48000/2 { minptime=10 useinbandfec=1 } (111)
+(webrtc_voice_engine.cc:402): red/48000/2 { =111/111 } (63)
+(webrtc_voice_engine.cc:402): G722/8000/1 (9)
+(webrtc_voice_engine.cc:402): ILBC/8000/1 (102)
+(webrtc_voice_engine.cc:402): PCMU/8000/1 (0)
+(webrtc_voice_engine.cc:402): PCMA/8000/1 (8)
+(webrtc_voice_engine.cc:402): CN/8000/1 (13)
+(webrtc_voice_engine.cc:402): telephone-event/48000/1 (110)
+(webrtc_voice_engine.cc:402): telephone-event/8000/1 (126)
+(audio_device_buffer.cc:66): AudioDeviceBuffer::ctor
+(audio_device_ios.mm:107): AudioDeviceIOS::ctor<NSThread: 0x302f8a440>{number = 136, name = (null)},bypass_voice_processing=0
+(audio_device_ios.mm:124): AudioDeviceIOS::AttachAudioBuffer
+(audio_device_ios.mm:131): AudioDeviceIOS::Init
+(audio_device_ios.mm:637): AudioDeviceIOS::UpdateAudioDevicebuffer
+(audio_device_buffer.cc:192): SetPlayoutSampleRate(48000)
+(audio_device_buffer.cc:212): SetPlayoutChannels(1)
+(audio_device_buffer.cc:186): SetRecordingSampleRate(48000)
+(audio_device_buffer.cc:206): SetRecordingChannels(1)
+(audio_device_ios.mm:1005): SetPlayoutDevice: Not implemented
+(audio_device_ios.mm:1058): SetStereoPlayout: Not implemented
+(audio_device_module_ios.mm:330): stereo playout is not supported
+(adm_helpers.cc:57): Failed to set stereo playout mode.
+(audio_device_ios.mm:1107): SetRecordingDevice: Not implemented
+(adm_helpers.cc:77): Failed to set stereo recording mode.
+(webrtc_voice_engine.cc:491): WebRtcVoiceEngine::ApplyOptions: AudioOptions {aec: 1, agc: 1, ns: 0, hf: 1, swap: 0, audio_jitter_buffer_max_packets: 200, audio_jitter_buffer_fast_accelerate: 0, audio_jitter_buffer_min_delay_ms: 0, }
+(webrtc_voice_engine.cc:510): Always disable AEC on iOS. Use built-in instead.
+(webrtc_voice_engine.cc:520): Always disable AGC on iOS. Use built-in instead.
+(audio_device_generic.cc:18): BuiltInAECIsAvailable: Not supported on this platform
+(audio_device_generic.cc:28): BuiltInAGCIsAvailable: Not supported on this platform
+(audio_device_generic.cc:38): BuiltInNSIsAvailable: Not supported on this platform
+(audio_processing_impl.cc:911): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 0, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: High }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: FixedDigital, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, headroom_db: 6, max_gain_db: 30, initial_gain_db: 8, max_gain_change_db_per_second: 3, max_output_noise_level_dbfs: -50 }, input_volume_control : { enabled 0}}
+Unbalanced calls start/end for tag 19
+Running application StreamReactNativeVideoSDKSample ({
+    initialProps =     {
+    };
+    rootTag = 231;
+})
+Running "StreamReactNativeVideoSDKSample" with {"rootTag":231,"initialProps":{}}
+Installing global.mmkvCreateNewInstance...
+[W] <libMMKV.mm:76::+[MMKV initializeMMKV:logLevel:handler:]> already called +initializeMMKV before, ignore this request
+Installed global.mmkvCreateNewInstance!
+[coordinator]: StreamClient.connect: this.wsConnection.connect()
+'[coordinator]: connection:_connect() - waiting for token', {}
+[coordinator]: Adding listener for all event
+[coordinator]: Adding listener for call.ended event
+[coordinator]: Adding listener for network.changed event
+react-native-share is not installed
+react-native-document-picker is not installed
+'[coordinator]: connection:_connect() - Connecting to wss://video.stream-io-api.com/video/connect?api_key=mmhfdzb5evj2&stream-auth-type=jwt&X-Stream-Client=stream-video-javascript-client-browser-1.8.0-video-react_native-sdk-1.0.14', { wsURL: 'wss://video.stream-io-api.com/video/connect?api_key=mmhfdzb5evj2&stream-auth-type=jwt&X-Stream-Client=stream-video-javascript-client-browser-1.8.0-video-react_native-sdk-1.0.14',
+  requestID: '52871f42-e471-4ec1-b55e-77b24da646ed' }
+[Call]: Starting join flow
+[location-hint]: Location header: AMS58-P5
+[Chat client]: Connected user: santest2
+[GESTURE HANDLER] Initialize gesture handler for view <RCTRootContentView: 0x13d0c9e20; frame = (0 0; 375 667); gestureRecognizers = <NSArray: 0x303ad6b20>; layer = <CALayer: 0x3034b48a0>> reactTag: 231; frame = {{0, 0}, {375, 667}}; layer = <CALayer: 0x3034b48a0>
+nw_connection_copy_protocol_metadata_internal_block_invoke [C394] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+nw_connection_copy_protocol_metadata_internal_block_invoke [C394] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+nw_connection_copy_protocol_metadata_internal_block_invoke [C394] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+nw_connection_copy_protocol_metadata_internal_block_invoke [C394] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+nw_connection_copy_connected_local_endpoint_block_invoke [C394] Client called nw_connection_copy_connected_local_endpoint on unconnected nw_connection
+nw_connection_copy_connected_path_block_invoke [C394] Client called nw_connection_copy_connected_path on unconnected nw_connection
+nw_connection_copy_connected_remote_endpoint_block_invoke [C394] Client called nw_connection_copy_connected_remote_endpoint on unconnected nw_connection
+nw_connection_copy_protocol_metadata_internal_block_invoke [C394] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+nw_connection_copy_protocol_metadata_internal_block_invoke [C394] Client called nw_connection_copy_protocol_metadata_internal on unconnected nw_connection
+nw_flow_add_write_request [C394 chat.stream-io-api.com:443 failed parent-flow (satisfied (Path is satisfied), interface: en0[802.11], ipv4, dns, uses wifi)] cannot accept write requests
+nw_write_request_report [C394] Send failed with error "Socket is not connected"
+nw_connection_copy_metadata_block_invoke [C394] Client called nw_connection_copy_metadata on unconnected nw_connection
+(RTCConfiguration.mm:247): Don't have configured cert.
+(peer_connection_factory.cc:337): Using default network controller factory
+(bitrate_prober.cc:47): Bandwidth probing enabled, set to inactive
+(pacing_controller.cc:185): bwe:pacer_updated pacing_kbps=300 padding_budget_kbps=0
+(remote_estimator_proxy.cc:68): Maximum interval between transport feedback RTCP messages: 250 ms
+(aimd_rate_control.cc:87): Using aimd rate control with back off factor 0.85
+(remote_bitrate_estimator_single_stream.cc:51): RemoteBitrateEstimatorSingleStream: Instantiating.
+(webrtc_session_description_factory.cc:162): DTLS-SRTP enabled; sending DTLS identity request (key type: 1).
+(openssl_key_pair.cc:40): Making key pair
+(openssl_key_pair.cc:93): Returning key pair
+(boringssl_certificate.cc:189): Making certificate for WebRTC
+(boringssl_certificate.cc:245): Returning certificate
+(webrtc_session_description_factory.cc:448): Setting new certificate.
+(peer_connection.cc:1131): Adding video transceiver in response to a call to AddTransceiver.
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034e93a0): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303af1da0): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303a8da70): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+}
+(peer_connection.cc:1131): Adding audio transceiver in response to a call to AddTransceiver.
+(RTCLogging.mm:33): (RTCDtmfSender.mm:70 -[RTCDtmfSender initWithNativeDtmfSender:]): RTC_OBJC_TYPE(RTCDtmfSender)(0x303752980): created DTMF sender: RTC_OBJC_TYPE(RTCDtmfSender) {
+  remainingTones: 
+  duration: 0.100000 sec
+  interToneGap: 0.050000 sec
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034f0360): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303af1a40): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303ab74b0): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3035202c0): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303b3ea90): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303b3e430): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+}
+(RTCLogging.mm:33): (RTCDtmfSender.mm:70 -[RTCDtmfSender initWithNativeDtmfSender:]): RTC_OBJC_TYPE(RTCDtmfSender)(0x30378de80): created DTMF sender: RTC_OBJC_TYPE(RTCDtmfSender) {
+  remainingTones: 
+  duration: 0.100000 sec
+  interToneGap: 0.050000 sec
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3035cfbc0): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303abfed0): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303abc180): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+}
+(media_session.cc:953): RED codec red is missing an associated payload type.
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034f3ca0): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303ab21c0): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303ab0960): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+}
+(RTCLogging.mm:33): (RTCDtmfSender.mm:70 -[RTCDtmfSender initWithNativeDtmfSender:]): RTC_OBJC_TYPE(RTCDtmfSender)(0x3037a7310): created DTMF sender: RTC_OBJC_TYPE(RTCDtmfSender) {
+  remainingTones: 
+  duration: 0.100000 sec
+  interToneGap: 0.050000 sec
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3035202c0): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303ac9ce0): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303b3e070): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034f3ca0): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303aca1f0): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303ac9bf0): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+}
+(RTCLogging.mm:33): (RTCDtmfSender.mm:70 -[RTCDtmfSender initWithNativeDtmfSender:]): RTC_OBJC_TYPE(RTCDtmfSender)(0x303781af0): created DTMF sender: RTC_OBJC_TYPE(RTCDtmfSender) {
+  remainingTones: 
+  duration: 0.100000 sec
+  interToneGap: 0.050000 sec
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034f3c20): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303ac8e10): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303acb330): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034fc1e0): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303aef900): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303aee550): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+}
+(RTCLogging.mm:33): (RTCDtmfSender.mm:70 -[RTCDtmfSender initWithNativeDtmfSender:]): RTC_OBJC_TYPE(RTCDtmfSender)(0x303770b60): created DTMF sender: RTC_OBJC_TYPE(RTCDtmfSender) {
+  remainingTones: 
+  duration: 0.100000 sec
+  interToneGap: 0.050000 sec
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034fe800): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303aef420): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303aecba0): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034fc160): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303aed080): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303aed260): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 3b734cfa-bc87-4de8-ad98-269ad9b082a1
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: a0bca9b9-eaed-41dc-8159-2f3fcd726eed
+}
+}
+(RTCLogging.mm:33): (RTCDtmfSender.mm:70 -[RTCDtmfSender initWithNativeDtmfSender:]): RTC_OBJC_TYPE(RTCDtmfSender)(0x3037a6470): created DTMF sender: RTC_OBJC_TYPE(RTCDtmfSender) {
+  remainingTones: 
+  duration: 0.100000 sec
+  interToneGap: 0.050000 sec
+}
+(RTCLogging.mm:33): (RTCRtpSender.mm:127 -[RTCRtpSender initWithFactory:nativeRtpSender:]): RTC_OBJC_TYPE(RTCRtpSender)(0x3034fc380): created sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+(RTCLogging.mm:33): (RTCRtpReceiver.mm:112 -[RTCRtpReceiver initWithFactory:nativeRtpReceiver:]): RTC_OBJC_TYPE(RTCRtpReceiver)(0x303aeec70): created receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+(RTCLogging.mm:33): (RTCRtpTransceiver.mm:189 -[RTCRtpTransceiver initWithFactory:nativeRtpTransceiver:]): RTC_OBJC_TYPE(RTCRtpTransceiver)(0x303aed0e0): created transceiver: RTC_OBJC_TYPE(RTCRtpTransceiver) {
+  sender: RTC_OBJC_TYPE(RTCRtpSender) {
+  senderId: 430752fe-e0b8-4bc1-b965-ec52af075c47
+}
+  receiver: RTC_OBJC_TYPE(RTCRtpReceiver) {
+  receiverId: 88fe3506-4565-4705-ba6a-6d8146551256
+}
+}
+(sdp_offer_answer.cc:2847): Session: 6342124105728884077 Old state: stable New state: closed
+(peer_connection.cc:571): Session: 6342124105728884077 is destroyed.
+(RTCConfiguration.mm:247): Don't have configured cert.
+(peer_connection_factory.cc:337): Using default network controller factory
+(bitrate_prober.cc:47): Bandwidth probing enabled, set to inactive
+(pacing_controller.cc:185): bwe:pacer_updated pacing_kbps=300 padding_budget_kbps=0
+(remote_estimator_proxy.cc:68): Maximum interval between transport feedback RTCP messages: 250 ms
+(aimd_rate_control.cc:87): Using aimd rate control with back off factor 0.85
+(remote_bitrate_estimator_single_stream.cc:51): RemoteBitrateEstimatorSingleStream: Instantiating.
+(webrtc_session_description_factory.cc:162): DTLS-SRTP enabled; sending DTLS identity request (key type: 1).
+(openssl_key_pair.cc:40): Making key pair
+(openssl_key_pair.cc:93): Returning key pair
+(boringssl_certificate.cc:189): Making certificate for WebRTC
+(boringssl_certificate.cc:245): Returning certificate
+(webrtc_session_description_factory.cc:448): Setting new certificate.
+'initMic', { setStatus: true }
+initMic no premission return

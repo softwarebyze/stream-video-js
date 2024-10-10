@@ -77,6 +77,7 @@ export abstract class InputMediaDeviceManager<
     if (this.state.optimisticStatus === 'enabled') {
       return;
     }
+    console.log('---- START enable in InputMediaDeviceManager ----');
 
     this.state.setPendingStatus('enabled');
 
@@ -97,6 +98,7 @@ export abstract class InputMediaDeviceManager<
    * @param {boolean} [forceStop=false] when true, stops the tracks regardless of the state.disableMode
    */
   async disable(forceStop: boolean = false) {
+    console.log('---- START disable in InputMediaDeviceManager ----');
     this.state.prevStatus = this.state.status;
     if (!forceStop && this.state.optimisticStatus === 'disabled') {
       return;

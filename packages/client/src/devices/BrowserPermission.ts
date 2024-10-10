@@ -84,6 +84,9 @@ export class BrowserPermission {
 
         try {
           this.wasPrompted = true;
+          console.log(
+            '---- START getUserMedia getStream in Browser permission ----',
+          );
           const stream = await navigator.mediaDevices.getUserMedia(
             this.permission.constraints,
           );

@@ -49,18 +49,17 @@ export class SfuStatsReporter {
   }
 
   private run = async () => {
-    const [subscriberStats, publisherStats] = await Promise.all([
-      this.subscriber.getStats().then(flatten).then(JSON.stringify),
-      this.publisher?.getStats().then(flatten).then(JSON.stringify) ?? '[]',
-    ]);
-
-    await this.sfuClient.sendStats({
-      sdk: this.sdkName,
-      sdkVersion: this.sdkVersion,
-      webrtcVersion: this.webRTCVersion,
-      subscriberStats,
-      publisherStats,
-    });
+    // const [subscriberStats, publisherStats] = await Promise.all([
+    //   this.subscriber.getStats().then(flatten).then(JSON.stringify),
+    //   this.publisher?.getStats().then(flatten).then(JSON.stringify) ?? '[]',
+    // ]);
+    // await this.sfuClient.sendStats({
+    //   sdk: this.sdkName,
+    //   sdkVersion: this.sdkVersion,
+    //   webrtcVersion: this.webRTCVersion,
+    //   subscriberStats,
+    //   publisherStats,
+    // });
   };
 
   start = () => {

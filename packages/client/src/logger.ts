@@ -36,6 +36,11 @@ export const logToConsole: Logger = (logLevel, message, ...args) => {
       logMethod = console.info;
       break;
     case 'trace':
+      if (isReactNative()) {
+        message = `Trace: ${message}`;
+        logMethod = console.info;
+        break;
+      }
       logMethod = console.trace;
       break;
     default:

@@ -202,12 +202,14 @@ export class MicrophoneManager extends InputMediaDeviceManager<MicrophoneManager
   }
 
   protected getDevices(): Observable<MediaDeviceInfo[]> {
+    console.log('---- START getDevices in MicrophoneManager ----');
     return getAudioDevices();
   }
 
   protected getStream(
     constraints: MediaTrackConstraints,
   ): Promise<MediaStream> {
+    console.log('---- START getStream in MicrophoneManager ----');
     return getAudioStream(constraints);
   }
 
@@ -221,9 +223,13 @@ export class MicrophoneManager extends InputMediaDeviceManager<MicrophoneManager
 
   private async startSpeakingWhileMutedDetection(deviceId?: string) {
     await withoutConcurrency(this.soundDetectorConcurrencyTag, async () => {
+      console.log(
+        '---- START startSpeakingWhileMutedDetection in MicrophoneManager ----',
+      );
       await this.stopSpeakingWhileMutedDetection();
       if (isReactNative()) {
         this.rnSpeechDetector = new RNSpeechDetector();
+        console.log('---- START RNSpeechDetector in MicrophoneManager ----');
         await this.rnSpeechDetector.start();
         const unsubscribe =
           this.rnSpeechDetector?.onSpeakingDetectedStateChange((event) => {
@@ -236,6 +242,9 @@ export class MicrophoneManager extends InputMediaDeviceManager<MicrophoneManager
         };
       } else {
         // Need to start a new stream that's not connected to publisher
+        console.log(
+          '---- START startSpeakingWhileMutedDetection getStream in MicrophoneManager ----',
+        );
         const stream = await this.getStream({
           deviceId,
         });

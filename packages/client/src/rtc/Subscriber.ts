@@ -275,6 +275,8 @@ export class Subscriber {
   private negotiate = async (subscriberOffer: SubscriberOffer) => {
     this.logger('info', `Received subscriberOffer`, subscriberOffer);
 
+    // console.log('subscriberOffer', subscriberOffer.sdp);
+
     await this.pc.setRemoteDescription({
       type: 'offer',
       sdp: subscriberOffer.sdp,
@@ -292,6 +294,8 @@ export class Subscriber {
     );
 
     const answer = await this.pc.createAnswer();
+
+    // console.log({ answer });
     await this.pc.setLocalDescription(answer);
 
     await this.sfuClient.sendAnswer({

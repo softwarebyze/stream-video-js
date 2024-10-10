@@ -414,6 +414,7 @@ export class Call {
       [OwnCapability.SEND_VIDEO]: TrackType.VIDEO,
       [OwnCapability.SCREENSHARE]: TrackType.SCREEN_SHARE,
     };
+    console.log({ permissionToTrackType });
     for (const [permission, trackType] of Object.entries(
       permissionToTrackType,
     )) {
@@ -960,6 +961,7 @@ export class Call {
       const audioSettings = this.state.settings?.audio;
       const isDtxEnabled = !!audioSettings?.opus_dtx_enabled;
       const isRedEnabled = !!audioSettings?.redundant_coding_enabled;
+      console.log({ isDtxEnabled, isRedEnabled });
       this.publisher = new Publisher({
         sfuClient,
         dispatcher: this.dispatcher,
@@ -2115,6 +2117,7 @@ export class Call {
   };
 
   private initMic = async (options: { setStatus: boolean }) => {
+    console.log('initMic', { setStatus: options.setStatus });
     // Wait for any in progress mic operation
     await this.microphone.statusChangeSettled();
 
@@ -2122,6 +2125,7 @@ export class Call {
       this.state.localParticipant?.audioStream ||
       !this.permissionsContext.hasPermission('send-audio')
     ) {
+      console.log('initMic no premission return');
       return;
     }
 
@@ -2132,6 +2136,7 @@ export class Call {
         this.microphone.state.mediaStream &&
         !this.publisher?.isPublishing(TrackType.AUDIO)
       ) {
+        console.log('initMic setTAus');
         await this.publishAudioStream(this.microphone.state.mediaStream);
       }
 

@@ -227,6 +227,8 @@ export class Publisher {
       throw new Error(`Can't publish a track that has ended already.`);
     }
 
+    console.log('---START publishStream in Publisher---');
+
     let transceiver = this.pc
       .getTransceivers()
       .find(
@@ -294,10 +296,7 @@ export class Publisher {
           ? getRNOptimalCodec()
           : preferredCodec;
 
-      const codecPreferences =
-        'setCodecPreferences' in transceiver
-          ? this.getCodecPreferences(trackType, codec)
-          : undefined;
+      const codecPreferences = undefined;
       if (codecPreferences) {
         this.logger(
           'info',
@@ -596,6 +595,7 @@ export class Publisher {
     }
 
     this.isIceRestarting = options?.iceRestart ?? false;
+    console.log({ offer });
     await this.pc.setLocalDescription(offer);
 
     try {
@@ -605,6 +605,7 @@ export class Publisher {
       });
 
       if (response.error) throw new Error(response.error.message);
+      console.log({ answer: response.sdp });
       await this.pc.setRemoteDescription({ type: 'answer', sdp: response.sdp });
     } finally {
       this.isIceRestarting = false;

@@ -14,6 +14,7 @@ export class RNSpeechDetector {
    */
   public async start() {
     try {
+      console.log('---- START getUserMedia RNSpeechDetector ----');
       const audioStream = await navigator.mediaDevices.getUserMedia({
         audio: true,
       });
